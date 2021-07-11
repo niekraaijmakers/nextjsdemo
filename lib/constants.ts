@@ -25,5 +25,9 @@ export const NAV_ITEMS = [
     {
         'title': 'Recipes',
         'id': 'recipes',
+    },
+    {
+        'title': 'Services',
+        'id': 'services'
     }
 ];

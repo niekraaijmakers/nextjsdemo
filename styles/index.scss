@@ -66,10 +66,89 @@ $primary: #a9b367;
   .logo-text-right{
     color: #000000;
   }
+
+  .card-title{
+    color: #FFF;
+  }
+
+  .card {
+    .btn{
+      display: block;
+    }
+  }
+
+  .home-carousel {
+
+    height: 500px;
+    display: flex;
+
+    .carousel-caption{
+
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      background-color:rgba(255, 255, 255, 0.90);
+
+      color: #000;
+
+      &.odd{
+        background-color: rgba(169, 179, 103, 1);
+      }
+      .container{
+        .col{
+          text-align: left;
+        }
+      }
+    }
+
+    .carousel-control-next, .carousel-control-prev{
+      z-index: 15;
+    }
+  }
 }
+
+
 
 @media (min-width: 768px) {
   #__next {
+
+    .carousel-caption.x-center{
+      left: 40%;
+    }
+    .home-carousel {
+      .carousel-caption {
+
+        &.left {
+          left: 10%;
+          right: auto;
+        }
+
+        &.right {
+          right: 10%;
+          left: auto;
+        }
+
+        &.bottom {
+          bottom: 10%;
+          top: auto;
+        }
+
+        &.top {
+          top: 10%;
+          bottom: auto;
+        }
+
+        &.x-center {
+          left: 40%;
+          margin-left: -260px;
+        }
+
+        &.y-center {
+          top: 35%;
+        }
+      }
+    }
 
     .navbar {
       padding: 1rem;
@@ -80,6 +159,28 @@ $primary: #a9b367;
       .main-hero-container{
         width: 30rem;
       }
+
+    }
+
+    .home-carousel {
+
+      height: 500px;
+      display: flex;
+
+      .carousel-caption {
+
+        background-color:rgba(255, 255, 255, 0.75);
+        height: 10rem;
+        top: 10%;
+        width: 50rem;
+
+        color: #000;
+
+        &.odd{
+          background-color: rgba(169, 179, 103, 0.75);
+        }
+      }
+
 
     }
   }
