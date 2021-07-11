@@ -12,7 +12,6 @@ export default function Layout({ preview, children }):JSX.Element {
         <Alert preview={preview} />
         <main>{children}</main>
       </div>
-      <Footer />
     </>
   )
 }

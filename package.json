@@ -8,17 +8,16 @@
   },
   "dependencies": {
     "autoprefixer": "10.1.0",
+    "react-bootstrap": "^1.6.1",
+    "bootstrap": "4.6.0",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "next": "latest",
-    "postcss": "8.2.15",
+    "sass": "^1.35.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "2.0.2",
     "typescript": "^4.3.5",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",

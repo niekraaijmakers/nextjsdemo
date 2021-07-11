@@ -6,6 +6,8 @@ import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }):JSX.Element {
   return (
+
+      preview ? (
     <div
       className={cn('border-b', {
         'bg-accent-7 border-accent-7 text-white': preview,
@@ -14,7 +16,6 @@ export default function Alert({ preview }):JSX.Element {
     >
       <Container>
         <div className="py-2 text-center text-sm">
-          {preview ? (
             <>
               This page is a preview.{' '}
               <a
@@ -25,20 +26,9 @@ export default function Alert({ preview }):JSX.Element {
               </a>{' '}
               to exit preview mode.
             </>
-          ) : (
-            <>
-              The source code for this blog is{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-success duration-200 transition-colors"
-              >
-                available on GitHub
-              </a>
-              .
-            </>
-          )}
         </div>
       </Container>
     </div>
+      ) : <></>
   )
 }

@@ -1,34 +1,44 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
+
 import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import { PAGE_TITLE } from '../lib/constants'
+import TopContainer from './layout/topcontainer';
+import Container from "react-bootstrap/Container";
+import {Button, Jumbotron} from "react-bootstrap";
+import Image from 'next/image'
+
+function HeroBanner() {
+  return (
+      <Jumbotron className={"main-hero min-vh-10"}>
+
+            <Image src={"https://redaktion.original-boot.camp/site/assets/files/21839/outdoor-bootcamp-training-essen.jpg"} layout={"fill"}/>
+            <div className={"img-overlay"}></div>
+            <Container className={"main-hero-container"}>
+                <p>Start living up to your potential!</p>
+                <p>
+                    <Button variant="primary">Get Started</Button>
+                </p>
+            </Container>
+
+      </Jumbotron>
+    );
+}
 
 export default function Index({ posts, preview }) {
-  const heroPost = posts[0]
-  const morePosts = posts.slice(1)
+
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{PAGE_TITLE}</title>
         </Head>
+        <TopContainer/>
+        <HeroBanner />
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
+
         </Container>
       </Layout>
     </>
