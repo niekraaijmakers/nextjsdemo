@@ -16,7 +16,7 @@ export default function Index({ posts, preview }) {
       <Layout preview={preview}>
         <Head>
           <title>{PAGE_TITLE}</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
         </Head>
         <TopContainer/>
         <HeroBanner />
