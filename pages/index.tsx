@@ -7,6 +7,7 @@ import TopContainer from './layout/topcontainer';
 import HeroBanner from "../components/hero-banner";
 import ServiceCards from "../components/service-cards";
 import HomeCarousel from "../components/homecarousel";
+import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
 
 
 export default function Index({ posts, preview }) {
@@ -22,6 +23,7 @@ export default function Index({ posts, preview }) {
         <HeroBanner />
         <ServiceCards />
         <HomeCarousel/>
+        <SubscribeNewsletterJumbo/>
       </Layout>
     </>
   )

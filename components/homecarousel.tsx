@@ -31,7 +31,7 @@ function HomeCarousel() {
         <Carousel className={"my-4 home-carousel"} interval={null} >
             {
                 items.map((item, index) =>
-                    <Carousel.Item key={'carousel-' + item} className={'mh-100'} >
+                    <Carousel.Item key={'carousel-' + index} className={'mh-100'} >
                         <img
                             alt={""}
                             className="d-block w-100"
