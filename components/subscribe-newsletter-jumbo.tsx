@@ -108,7 +108,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 };
 
 function SubscribeNewsletterJumbo() {
-    const url = `/api/subscribe?a=a`;
+    const url = `https://gmail.us6.list-manage.com/subscribe/post?u=42360b7fde6584940f387e96a&id=2e6cfed026`;
 
     return (
         <Jumbotron className={"min-vh-10"}>
