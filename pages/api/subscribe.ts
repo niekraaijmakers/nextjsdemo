@@ -27,7 +27,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 
         const response = await fetch(url,{
             method: 'POST',
-            timeout: 3
+            timeout: 3000
         });
 
         if(res.statusCode === 200){
@@ -44,7 +44,9 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 
     }catch(err){
 
+        console.log("error occured", err);
         res.status(500).json({
+            body: err,
             error: true
         })
     }
