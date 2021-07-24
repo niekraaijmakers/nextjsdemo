@@ -1,4 +1,4 @@
-async function fetchAPI(query, { variables = null, preview = null } = {}) {
+export async function fetchAPI<T = any>(query, { variables = null, preview = null } = {}) {
   const res = await fetch(process.env.GRAPHCMS_PROJECT_API, {
     method: 'POST',
     headers: {
@@ -22,7 +22,7 @@ async function fetchAPI(query, { variables = null, preview = null } = {}) {
     throw new Error('Failed to fetch API')
   }
 
-  return json.data
+  return json.data as T;
 }
 
 export async function getPreviewPostBySlug(slug) {

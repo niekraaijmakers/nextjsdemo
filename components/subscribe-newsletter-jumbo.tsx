@@ -45,7 +45,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 
             <h3 className="mc__title">
                 {status === "success" ? "Success!" :
-                    "Join our email list for future updates."}
+                    "Subscribe to my newsletter!"}
             </h3>
 
             {status === "sending" && (

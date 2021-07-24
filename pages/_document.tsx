@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
                 integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
                 crossOrigin="anonymous"
             />
+            <script src="https://kit.fontawesome.com/e5a0a3db69.js" crossOrigin="anonymous"></script>
         </Head>
 
         <body>

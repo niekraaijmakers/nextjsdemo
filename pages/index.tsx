@@ -1,16 +1,17 @@
 
 import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import { PAGE_TITLE } from '../lib/constants'
 import TopContainer from './layout/topcontainer';
 import HeroBanner from "../components/hero-banner";
 import ServiceCards from "../components/service-cards";
-import HomeCarousel from "../components/homecarousel";
+import JumboCarousel from "../components/jumbocarousel";
 import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
+import Footer from "./layout/footer";
+import {getCarouselItemsById} from "../lib/carousel";
 
 
-export default function Index({ posts, preview }) {
+export default function Index({ preview,carousel }) {
 
   return (
     <>
@@ -23,16 +24,17 @@ export default function Index({ posts, preview }) {
         <TopContainer/>
         <HeroBanner />
         <ServiceCards />
-        <HomeCarousel/>
+        <JumboCarousel {...carousel} />
         <SubscribeNewsletterJumbo/>
+        <Footer/>
       </Layout>
     </>
   )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+  const carousel = (await getCarouselItemsById("ckres5r0o0yws0b12pgpx4ul8")) || [];
   return {
-    props: { posts, preview },
+    props: {  preview, carousel },
   }
 }
