@@ -24,12 +24,12 @@ const services = [
 
 function ServiceCards() {
     return (
-        <Container>
+        <Container className={"service-cards my-5"}>
 
             <Row>
                 {
                     services.map((service, index) =>
-                        <Col key={'col-' + index}>
+                        <Col key={'col-' + index} className={"px-5"}>
                             <Card>
                                 <Card.Img variant="top" src={service.img}/>
                                 <Card.Body className={"bg-dark"}>

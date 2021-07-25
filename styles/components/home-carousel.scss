@@ -1,0 +1,36 @@
+@use "../vars";
+
+@media (min-width: 768px) {
+  #__next {
+    .home-carousel {
+
+      height: 500px;
+      display: flex;
+
+      .carousel-caption {
+
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        background-color: rgba(vars.$secondary, 0.90);
+
+        color: vars.$black;
+
+        &.odd {
+          background-color: rgba(vars.$primary, 1);
+        }
+
+        .container {
+          .col {
+            text-align: left;
+          }
+        }
+      }
+
+      .carousel-control-next, .carousel-control-prev {
+        z-index: 15;
+      }
+    }
+  }
+}

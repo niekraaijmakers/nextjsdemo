@@ -9,6 +9,7 @@ import JumboCarousel from "../components/jumbocarousel";
 import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
 import Footer from "./layout/footer";
 import {getCarouselItemsById} from "../lib/carousel";
+import Spacer from "../components/spacer";
 
 
 export default function Index({ preview,carousel }) {
@@ -23,7 +24,9 @@ export default function Index({ preview,carousel }) {
         </Head>
         <TopContainer/>
         <HeroBanner />
+        <Spacer/>
         <ServiceCards />
+        <Spacer/>
         <JumboCarousel {...carousel} />
         <SubscribeNewsletterJumbo/>
         <Footer/>

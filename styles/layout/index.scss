@@ -1,0 +1,68 @@
+@use "../vars";
+@use "reset";
+
+
+
+#__next{
+
+  .navbar{
+
+
+    .navbar-nav {
+
+      flex-wrap: wrap;
+      width: 100%;
+
+
+    }
+
+
+  }
+
+
+  .logo-text-left{
+    color: vars.$primary;
+  }
+
+  .logo-text-right{
+    color: vars.$black;
+  }
+
+  .card-title{
+    color: vars.$secondary;
+  }
+
+  .card {
+    .btn{
+      display: block;
+    }
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  #__next {
+
+    .carousel-caption.x-center{
+      left: 40%;
+    }
+
+
+    .navbar {
+      padding: 1rem;
+    }
+
+    .footer{
+      border-top: 3px solid vars.$primary;
+      a {
+        font-size: 2rem;
+        margin: 0.5rem 0.5rem;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}
+

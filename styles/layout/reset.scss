@@ -1,0 +1,39 @@
+@use "../vars";
+
+
+body{
+  background-color: vars.$secondary;
+}
+
+.bg-primary{
+  background-color: vars.$primary !important;
+}
+
+.bg-secondary{
+  background-color: vars.$secondary !important;
+}
+
+input[type='text'],input[type='email']{
+  border: 1px solid #c6c6c6;
+
+  &:hover{
+    border-color: rgba(vars.$primary, 1);
+  }
+}
+
+a{
+  color: vars.$black;
+}
+
+a:hover, a:active{
+  color: vars.$primary;
+}
+
+.btn.btn-primary{
+  background-color: vars.$primary;
+  border-color: darken(vars.$primary, 20%);
+
+  &:hover{
+    color: vars.$black;
+  }
+}

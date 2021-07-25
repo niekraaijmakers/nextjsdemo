@@ -7,7 +7,7 @@ const TopContainer = ():JSX.Element => {
 
   return (
       <Container fluid className={'bg-dark'}>
-          <Container className={'mx-auto bg-white'}>
+          <Container className={'mx-auto bg-secondary'}>
               <Row>
                   <Col className='d-none d-lg-block' md={4} xs={12}>
                       <LogoAndTagLine/>

@@ -1,0 +1,22 @@
+@use "../vars";
+
+#__next {
+  .hr-spacer {
+
+    display: flex;
+    height: 1px;
+
+    .left, .right {
+      width: 50%;
+      height: 100%;
+    }
+
+    .left {
+      background: linear-gradient(to left, vars.$primary, vars.$secondary);
+    }
+
+    .right {
+      background: linear-gradient(to left, vars.$secondary, vars.$primary);
+    }
+  }
+}
