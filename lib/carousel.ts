@@ -1,4 +1,5 @@
 import {fetchAPI} from "./graphcms";
+import {ImageModel, RichText} from "./model";
 
 export interface CarouselResponse {
     carousel: CarouselModel
@@ -8,9 +9,7 @@ export interface CarouselModel {
     carouselTitle: string;
 }
 
-export interface ImageModel{
-    url:string;
-}
+
 
 export interface CarouselItem {
     id: string;
@@ -18,12 +17,10 @@ export interface CarouselItem {
     cta?: CTAModel | null;
     cssLocation: string;
     backgroundImage: ImageModel
-    description: CarouselDescription;
+    description: RichText;
 
 }
-export interface CarouselDescription {
-    html: string;
-}
+
 
 export interface CTAModel {
     "isSecondary": boolean;
@@ -42,6 +39,7 @@ export async function getCarouselItemsById(id):Promise<CarouselModel> {
                         heading
                         backgroundImage {
                           url
+                          fileName
                         }
                         cssLocation
                         description {
