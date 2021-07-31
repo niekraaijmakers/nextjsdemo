@@ -41,11 +41,35 @@
 
 }
 
+.show-md, .show-lg, .show-xs, .show-lg, .show-xl, .show-xxl {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .show-xs{
+    display: block;
+  }
+}
+
+
+
+
+
 @media (min-width: 768px) {
   #__next {
 
     .carousel-caption.x-center{
       left: 40%;
+    }
+
+    .show-md{
+      display: block;
+    }
+
+    .logo-img{
+      display: block;
+      min-width: 86px;
+      min-height: 86px;
     }
 
 
@@ -67,3 +91,22 @@
 
 }
 
+
+@media (min-width: 992px) {
+  .show-lg{
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .show-xl{
+    display: block;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .show-xxl{
+    display: block;
+  }
+}

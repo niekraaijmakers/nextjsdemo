@@ -7,13 +7,13 @@ const LogoAndTagLine = () => {
     return (
         <Container>
             <Row>
-                <Col xs={4}>
+                <Col xs={0} md={4} >
                     <Link href={'/'}>
-                            <img className={'mw-100 my-2 cp'} src={'/logo-small.jpg'} srcSet={'/logo-big.jpg 2x'}/>
+                            <img className={'mw-100 my-2 cp logo-img show-md'} src={'/logo-small.jpg'} srcSet={'/logo-big.jpg 2x'}/>
                     </Link>
                 </Col>
-                <Col xs={6} className={'my-auto'}>
-                    <img src={'/logo-text-small.jpg'} srcSet={'/logo-text-big.jpg 2x'}/>
+                <Col xs={10} md={6} className={'my-auto'}>
+                    <img src={'/logo-text-small.jpg'} className={""} srcSet={'/logo-text-big.jpg 2x'}/>
                 </Col>
             </Row>
         </Container>

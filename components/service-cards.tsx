@@ -29,7 +29,7 @@ function ServiceCards() {
             <Row>
                 {
                     services.map((service, index) =>
-                        <Col key={'col-' + index} className={"px-5"}>
+                        <Col key={'col-' + index} className={"px-lg-5"}>
                             <Card>
                                 <Card.Img variant="top" src={service.img}/>
                                 <Card.Body className={"bg-dark"}>
