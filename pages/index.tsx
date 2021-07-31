@@ -10,7 +10,7 @@ import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
 import Footer from "./layout/footer";
 import {getCarouselItemsById} from "../lib/carousel";
 import Spacer from "../components/spacer";
-
+import 'node-source-han-sans/SourceHanSans-Regular-all.css';
 
 export default function Index({ preview,carousel }) {
 
@@ -18,6 +18,7 @@ export default function Index({ preview,carousel }) {
     <>
       <Layout preview={preview}>
         <Head>
+
           <title>{PAGE_TITLE}</title>
 
           <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>

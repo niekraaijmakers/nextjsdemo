@@ -1367,6 +1367,11 @@ node-releases@^1.1.71:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.73.tgz#dd4e81ddd5277ff846b80b52bb40c49edf7a7b20"
   integrity sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==
 
+node-source-han-sans@^1.1.0-2.001R:
+  version "1.1.0-2.001R"
+  resolved "https://registry.yarnpkg.com/node-source-han-sans/-/node-source-han-sans-1.1.0-2.001R.tgz#adbfb2c85d640ebf9957d29f95d97f8f2d61a64c"
+  integrity sha512-ZgcU4iylnqXVetNbl1lO0og05D82azmNGr0Z9bJAD1J+oIj9JC0Knxdto4sgQVhoo47ieN9JvmhfH63tFJiNFQ==
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
