@@ -10,7 +10,10 @@ import Layout from 'components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 import PostTitle from 'components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from 'lib/constants'
+import {CMS_NAME, PAGE_TITLE} from 'lib/constants'
+import TopContainer from "../layout/topcontainer";
+import HeroPost from "../../components/hero-post";
+import Footer from "../layout/footer";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -22,6 +25,7 @@ export default function Post({ post, morePosts, preview }) {
 
   return (
     <Layout preview={preview}>
+      <TopContainer/>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -48,6 +52,7 @@ export default function Post({ post, morePosts, preview }) {
           </>
         )}
       </Container>
+      <Footer/>
     </Layout>
   )
 }
