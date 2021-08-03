@@ -1,9 +1,9 @@
-import {Button, Form, Jumbotron} from "react-bootstrap";
-
 import Container from "react-bootstrap/Container";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import {useEffect, useState} from "react";
-
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 const CustomForm = ({ status, message, onValidated }) => {
 

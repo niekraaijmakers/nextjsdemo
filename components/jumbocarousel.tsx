@@ -1,4 +1,3 @@
-import {Button, Carousel, Jumbotron} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,6 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
+import Button from "react-bootstrap/Button";
 import SwiperCore, {
     Pagination
 } from 'swiper/core';

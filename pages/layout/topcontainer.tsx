@@ -6,13 +6,13 @@ import LogoAndTagLine from "./logo-and-tag-line";
 const TopContainer = ():JSX.Element => {
 
   return (
-      <Container fluid className={'bg-dark'}>
-          <Container className={'mx-auto bg-secondary'}>
+      <Container fluid className={'bg-dark top-container nopad-x-xs'}>
+          <Container className={'mx-auto bg-secondary nopad-x-xs'}>
               <Row>
                   <Col className='d-none d-lg-block' md={4} xs={12}>
                       <LogoAndTagLine/>
                   </Col>
-                  <Col lg={8} xs={12}  >
+                  <Col lg={8} xs={12} className={"nopad-x-xs"}  >
                       <Navigation/>
                   </Col>
               </Row>

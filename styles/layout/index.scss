@@ -49,10 +49,19 @@
   .show-xs{
     display: block;
   }
+
 }
 
 
+@media (max-width: 576px) {
+  #__next {
 
+    .text-align-right{
+      text-align: right;
+    }
+
+  }
+}
 
 
 @media (min-width: 768px) {

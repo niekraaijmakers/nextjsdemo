@@ -2,7 +2,8 @@ import Container from "react-bootstrap/Container";
 import Layout from "./layout";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import {Button, Card} from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 const services = [
     {
@@ -24,7 +25,7 @@ const services = [
 
 function ServiceCards() {
     return (
-        <Container className={"service-cards my-5"}>
+        <Container className={"service-cards"}>
 
             <Row>
                 {

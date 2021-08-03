@@ -1,7 +1,6 @@
-import {Button, Jumbotron} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Image from "next/image";
-
+import Jumbotron from "react-bootstrap/Jumbotron";
 export default function Banner(){
     return (
         <Jumbotron className={"hero small-hero min-vh-5"}>

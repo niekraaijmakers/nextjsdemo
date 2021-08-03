@@ -1,7 +1,7 @@
 import {TextImageModel} from "../lib/textimage";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import {Image} from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import Container from "./container";
 
 export default function textImage(props: TextImageModel) {
