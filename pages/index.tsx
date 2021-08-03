@@ -1,7 +1,5 @@
 
 import Layout from '../components/layout'
-import Head from 'next/head'
-import { PAGE_TITLE } from '../lib/constants'
 import TopContainer from './layout/topcontainer';
 import HeroBanner from "../components/hero-banner";
 import ServiceCards from "../components/service-cards";
@@ -10,7 +8,6 @@ import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
 import Footer from "./layout/footer";
 import {getCarouselItemsById} from "../lib/carousel";
 import Spacer from "../components/spacer";
-import 'node-source-han-sans/SourceHanSans-Regular-all.css';
 
 export default function Index({ preview,carousel }) {
 
