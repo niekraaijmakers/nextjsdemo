@@ -1,4 +1,21 @@
-.avatar-card{
-  min-height: 10rem;
-  min-width: 10rem;
+@use "../vars";
+
+#__next {
+
+  .avatar-card{
+    min-height: 10rem;
+    min-width: 10rem;
+  }
+
+  .top-img{
+    margin: 3rem 0;
+  }
+
+  .top-img{
+    position: relative;
+
+
+  }
+
 }
+

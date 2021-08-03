@@ -4,6 +4,9 @@ import Avatar from '../components/avatar'
 import Date from '../components/date'
 import CoverImage from '../components/cover-image'
 import Link from 'next/link'
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 export default function HeroPost({
   title,
@@ -14,25 +17,35 @@ export default function HeroPost({
   slug,
 }):JSX.Element {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
+    <section className={"hero-post"}>
+      <div className="top-img">
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
-      <div className="mb-20 md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl leading-tight lg:text-6xl">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="hover:underline">{title}</a>
-            </Link>
-          </h3>
-          <div className="mb-4 text-lg md:mb-0">
-            <Date dateString={date} />
-          </div>
-        </div>
-        <div>
-          <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture.url} />
-        </div>
+      <div className="hero-text">
+
+        <Container>
+          <Row>
+            <Col xs={6} md={10}>
+
+              <div>
+                <h3>
+                  <Link as={`/posts/${slug}`} href="/posts/[slug]">
+                    <a>{title}</a>
+                  </Link>
+                </h3>
+                <div className="date">
+                  <Date dateString={date} />
+                </div>
+              </div>
+              <p className="leadingtext">{excerpt}</p>
+            </Col>
+            <Col  xs={6}  md={2}>
+              <Avatar name={author.name} hideName={true} picture={author.picture.url} />
+            </Col>
+          </Row>
+
+
+        </Container>
       </div>
     </section>
   )

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image'
 
-export default function Avatar({ name, picture }):JSX.Element {
+export default function Avatar({ name, picture , hideName = false}):JSX.Element {
   return (
     <div className="d-flex align-items-center">
       <div className="avatar-card position-relative mr-4">
@@ -13,7 +13,9 @@ export default function Avatar({ name, picture }):JSX.Element {
           alt={name}
         />
       </div>
-      <div className="text-xl">{name}</div>
+        {
+            !hideName && <div className="text-xl">{name}</div>
+        }
     </div>
   )
 }

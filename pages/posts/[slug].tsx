@@ -3,7 +3,6 @@ import ErrorPage from 'next/error'
 import Container from 'components/container'
 import PostBody from 'components/post-body'
 import MoreStories from 'components/more-stories'
-import Header from 'components/header'
 import PostHeader from 'components/post-header'
 import SectionSeparator from 'components/section-separator'
 import Layout from 'components/layout'
@@ -12,7 +11,6 @@ import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import {CMS_NAME, PAGE_TITLE} from 'lib/constants'
 import TopContainer from "../layout/topcontainer";
-import HeroPost from "../../components/hero-post";
 import Footer from "../layout/footer";
 
 export default function Post({ post, morePosts, preview }) {
@@ -27,7 +25,6 @@ export default function Post({ post, morePosts, preview }) {
     <Layout preview={preview}>
       <TopContainer/>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -45,7 +42,7 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.content} author={post.author} date={post.date}/>
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

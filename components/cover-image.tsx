@@ -25,7 +25,7 @@ export default function CoverImage(props:CoverImageProps):JSX.Element {
   )
 
   return (
-    <div className="sm:mx-0">
+    <div>
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a aria-label={title}>{image}</a>
