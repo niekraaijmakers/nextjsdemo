@@ -9,10 +9,27 @@
       height: 450px;
     }
 
+    .carousel-caption{
+      left: 0;
+      right: 0;
+
+      background-color: rgba(vars.$black, 0.50);
+    }
+
+    .swiper-pagination-bullet{
+      background-color: vars.$white;
+      opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: vars.$primary;
+    }
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0;
   }
 
 }
-
 
 
 @media (min-width: 768px) {
@@ -89,6 +106,7 @@
           right: 10%;
           left: auto;
         }
+
 
 
       }
