@@ -6,3 +6,9 @@ export interface ImageModel{
 export interface RichText {
     html: string;
 }
+
+export interface CTAModel {
+    "isSecondary": boolean;
+    "text": string;
+    "url": string;
+}

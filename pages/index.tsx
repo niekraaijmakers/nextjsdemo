@@ -8,14 +8,15 @@ import SubscribeNewsletterJumbo from "../components/subscribe-newsletter-jumbo";
 import Footer from "./layout/footer";
 import {getCarouselItemsById} from "../lib/carousel";
 import Spacer from "../components/spacer";
+import {getBannerById} from "../lib/banner";
 
-export default function Index({ preview,carousel }) {
+export default function Index({ preview,carousel,banner }) {
 
   return (
     <>
       <Layout preview={preview}>
         <TopContainer/>
-        <HeroBanner />
+        <HeroBanner {...banner} />
         <Spacer/>
         <ServiceCards />
         <Spacer/>
@@ -28,8 +29,9 @@ export default function Index({ preview,carousel }) {
 }
 
 export async function getStaticProps({ preview = false }) {
+  const banner = (await getBannerById("ckrxhtsbk6eih0b04w9y23ssj"));
   const carousel = (await getCarouselItemsById("ckres5r0o0yws0b12pgpx4ul8")) || [];
   return {
-    props: {  preview, carousel },
+    props: {  preview, carousel, banner },
   }
 }

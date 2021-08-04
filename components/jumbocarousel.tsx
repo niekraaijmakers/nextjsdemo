@@ -10,6 +10,7 @@ import Button from "react-bootstrap/Button";
 import SwiperCore, {
     Pagination
 } from 'swiper/core';
+import CTA from "./cta";
 SwiperCore.use([Pagination]);
 
 
@@ -52,9 +53,7 @@ function JumboCarousel(props:CarouselModel) {
                                 !!item.cta && (
                                     <Row xs={12}>
                                         <Col>
-                                            <Button href={item.cta.url} variant={item.cta.isSecondary ? 'secondary' : 'primary'} >
-                                                <span>{item.cta.text}</span>
-                                            </Button>
+                                            <CTA {...item.cta}/>
                                         </Col>
                                     </Row>
                                 )

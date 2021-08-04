@@ -1,5 +1,5 @@
 import {fetchAPI} from "./graphcms";
-import {ImageModel, RichText} from "./model";
+import {CTAModel, ImageModel, RichText} from "./model";
 
 export interface CarouselResponse {
     carousel: CarouselModel
@@ -22,11 +22,8 @@ export interface CarouselItem {
 }
 
 
-export interface CTAModel {
-    "isSecondary": boolean;
-    "text": string;
-    "url": string;
-}
+
+
 
 export async function getCarouselItemsById(id):Promise<CarouselModel> {
     const data:CarouselResponse = await fetchAPI<CarouselResponse>(`
